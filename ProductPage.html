@@ -35,11 +35,26 @@
                 <div class="title">
                     <p id="produtoNome"></p>
                 </div>
+                <div class="star">
+                    <div class="">
+                        <img src="img/ICONS/star-fill.svg" alt="">
+                        <img src="img/ICONS/star-fill.svg" alt="">
+                        <img src="img/ICONS/star-fill.svg" alt="">
+                        <img src="img/ICONS/star-fill.svg" alt="">
+                        <img src="img/ICONS/star-fill.svg" alt=""></div>
+                    <p>4.5</p>
+                </div>
                 <div class="sub-title">
                     <P id="produtoDescricao"></P>
                 </div>
                 <div class="price">
-                    <span>R$<p id="produtoPreco"></p></span>
+                    <div class="price2">
+                        <span>R$</span>
+                        <p id="produtoPreco"></p>
+                    </div>
+                </div>
+                <div class="more">
+                    <p>Baixe o X App e ganhe 5% de desconto com o cupom PRIMEIRACOMPRA, na primeira compra feita no app <a href="">Saiba mais</a></p>
                 </div>
                 <div class="btn">
                     <button>ADQUIRIR</button>
@@ -56,12 +71,10 @@
                         <p>Escolha Seu Tamanho</p>
                     </div>
                     <div class="sizes">
-                        <div class="box1">
-                            <p>39</p>
-                        </div>
-                        <div class="box1">
-                            <p></p>
-                        </div>
+                            <button id="size1"  ></button>
+                            <button id="size2" ></button>
+                            <button id="size3" ></button>
+                            <button id="size4" ></button>
                     </div>
                 </div>
                 <div class="color">
@@ -98,6 +111,7 @@
         let imagem2 = localStorage.getItem('produtoImagem2');
         let imagem3 = localStorage.getItem('produtoImagem3');
         let imagem4 = localStorage.getItem('produtoImagem4');
+
         
 
         document.getElementById('produtoImagem').src = imagem;
@@ -105,6 +119,9 @@
         document.getElementById('produtoDescricao').innerText = descricao;
         document.getElementById('produtoPreco').innerText = preco;
 
+
+
+        /*SETAR COR DOS TENIS*/
         const SetColor1 = `
             <button class="color" style="background-color: ${color1};">
             
@@ -123,7 +140,11 @@
         document.getElementById('cor2').innerHTML = SetColor2;
         document.getElementById('cor3').innerHTML = SetColor3;
 
-        /*IMAGENS DO TENIS*/
+
+
+
+
+        /*TROCAR IMAGENS DO TENIS*/
         const imagens = [imagem2, imagem3, imagem4];
 
         function trocarImagem(indice) {
@@ -131,7 +152,33 @@
 
             imgElement.src = imagens[indice];
         }
-            
+
+        /*SETAR TAMANHOS DOS TENIS*/
+        
+        let tamanho1 = localStorage.getItem('produtoTamanho1');
+        let tamanho2 = localStorage.getItem('produtoTamanho2');
+        let tamanho3 = localStorage.getItem('produtoTamanho3');
+        let tamanho4 = localStorage.getItem('produtoTamanho4');
+        let tamanho5 = localStorage.getItem('produtoTamanho5');
+
+        const SetSize = `
+            <button id="size1"> ${tamanho1} </button>
+        `
+        const SetSize2 = `
+            <button id="size1"> ${tamanho2} </button>
+        `
+        const SetSize3 = `
+            <button id="size1"  > ${tamanho3} </button>
+        `   
+        const SetSize4 = `
+            <button id="size1"  > ${tamanho4} </button>
+        `
+        
+        document.getElementById('size1').innerHTML = SetSize;
+        document.getElementById('size2').innerHTML = SetSize2;
+        document.getElementById('size3').innerHTML = SetSize3;
+        document.getElementById('size4').innerHTML = SetSize4;
+
     </script>
 </body>
 

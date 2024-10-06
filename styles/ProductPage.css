@@ -64,8 +64,8 @@
         border: 1px solid rgba(0, 0, 0, 0.271);
         display: flex;
         flex-direction: column;
-        gap: 60px;
         align-items: center;
+        gap: 15px;
 
         .title{
             p{
@@ -74,14 +74,31 @@
                 font-weight: 500;
             }
         }
+        .star{
+            display: flex;
+            gap: 30px;
+        }
         .sub-title{
             font-size: 15px;
-            text-align: center;
+            text-align: start;
+            align-items: center;
         }
         .price{
+            gap: 0px;
             color: black;
             font-size: 35px;
-            display: flex;
+
+            .price2{
+                display: flex;
+            }
+            .card{
+                position: relative;
+                bottom: 30px;
+                font-size: 15px;
+            }
+        }
+        .more{
+            color: rgb(46, 46, 255);
         }
         .btn{
             display: flex;
@@ -142,17 +159,16 @@
                 }
             }
             .sizes{
-                margin-left: 40px;
-
-                .box1{
-                    margin: 0 auto;
-                    align-content: center;
-                    display: inline-block;
-                    text-align: center;
-                    width: 100px;
-                    height: 40px;
-                    border: 1px solid rgba(0, 0, 0, 0.286);
-                }   
+                display: inline-block;
+                margin-left: 30px;
+                button{ 
+                    border: none;
+                    width: 70px;
+                    height: 30px;
+                }
+                button:hover{
+                    background-color: #7870ff;
+                }
             }
         }
         .color{
@@ -177,6 +193,9 @@
                     height: 40px;
                     border-radius: 100%;
                     background-color: #ccc;
+                }
+                button.selecionado{
+                    background-color: blue;
                 }
             }
         }

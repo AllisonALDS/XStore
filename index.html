@@ -43,7 +43,7 @@
                 </div>
                 <div class="btn">
                     <p>R$259,99</p>
-                    <button onclick="verProduto('img/Produtos/Produto1/tenis1.png', 'ESPORTIVO', 259.99, 'Lorem Ipsum is simply dummy', 'blue', 'red', 'Green', 'img/Produtos/Produto1/tenis1.png', 'img/Produtos/Produto1/tenis2.png', 'img/Produtos/Produto1/tenis3.png')">ADQUIRIR</button>
+                    <button onclick="verProduto('img/Produtos/Produto1/tenis1.png', 'TÊNIS ESPORTIVO', 259.99, 'Visual esportivo com conforto e suporte para o dia a dia. O tênis masculino Olympikus Estilo 2 ', 'Black', 'red', 'aqua', 'img/Produtos/Produto1/tenis1.png', 'img/Produtos/Produto1/tenis2.png', 'img/Produtos/Produto1/tenis3.png', '39', '40', '41', '42')">ADQUIRIR</button>
                 </div>
             </div>
 
@@ -70,7 +70,7 @@
                                 <p>R$<span>199,99</span></p>
                             </div>
                             <div class="btn">
-                                <button onclick="verProduto('img/Produtos/Produto2/tenis1.png', 'Tênis Nike Air Max 90 Masculino', 199.99, 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', 'blue', 'red', 'Green', 'img/Produtos/Produto2/tenis1.png', 'img/Produtos/Produto2/tenis2.png', 'img/Produtos/Produto2/tenis3.png')">ADQUIRIR</button>
+                                <button onclick="verProduto('img/Produtos/Produto2/tenis1.png', 'Tênis Adidas Breaknet',    199.99, 'Para um melhor ajuste nos pés, recomendamos a compra de um tamanho menor do que o seu usual. ', 'blue', 'Green', 'Black', 'img/Produtos/Produto2/tenis1.png', 'img/Produtos/Produto2/tenis2.png', 'img/Produtos/Produto2/tenis3.png', '37', '38', '39', '40')">ADQUIRIR</button>
                             </div>
                         </div>
                         <div class="box1">
@@ -159,7 +159,7 @@
     </footer>
 
     <script>
-        function verProduto(imagem, nome, preco, descricao, color1, color2, color3, imagem2, imagem3, imagem4) {
+        function verProduto(imagem, nome, preco, descricao, color1, color2, color3, imagem2, imagem3, imagem4, tamanho1, tamanho2, tamanho3, tamanho4) {
 
             localStorage.clear();
 
@@ -168,16 +168,29 @@
             localStorage.setItem('produtoNome', nome);
             localStorage.setItem('produtoPreco', preco);
             localStorage.setItem('produtoDescricao', descricao);
+
             localStorage.setItem('produtoColor1', color1);
             localStorage.setItem('produtoColor2', color2);
             localStorage.setItem('produtoColor3', color3);
+
             localStorage.setItem('produtoImagem2', imagem2);
             localStorage.setItem('produtoImagem3', imagem3);
             localStorage.setItem('produtoImagem4', imagem4);
 
 
+            localStorage.setItem('produtoTamanho1', tamanho1);
+            localStorage.setItem('produtoTamanho2', tamanho2);
+            localStorage.setItem('produtoTamanho3', tamanho3);
+            localStorage.setItem('produtoTamanho4', tamanho4);
+
+
             // Redireciona para a página do produto
             window.location.href = 'ProductPage.html';
+
+            /*BOTAO SELECIONADO*/
+
+
+
         }
     </script>
 </body>
