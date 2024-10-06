@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/carrinho.css">
+    <link rel="stylesheet" href="font/font.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Document</title>
+</head>
+<header>
+    <div class="col-header">
+        <div class="logo"><a href=""><img src="img/Logo-removebg-preview.png" alt=""></a></div>
+        <div class="topics">
+            <ul>
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">DESTAQUE</a></li>
+                <li><a href="#">HOMEM</a></li>
+                <li><a href="#">MULHER</a></li>
+            </ul>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="">User</a></li>
+                <li><a href="">Car</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<body id="bodyaqui">
+    <main>
+        <div class="central">
+            <div class="tabela">
+                <table id="tabela" >
+                    <thead>
+                        <tr>
+                            <th>PRODUTO</th>
+                            <th>PREÇO</th>
+                            <th>QUANTIDADE</th>
+                            <th>SUBTOTAL</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product">
+                                    <img src="" alt="">
+                                    <div class="info">
+                                        <div class="name">NomedoProduto</div>
+                                        <div class="categoria">Categoria</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td id="price1" ></td>
+                            <td>
+                                <div class="">
+                                    <P class="qty"></P>
+                                </div>
+                            </td>
+                            <td id="preco-final" ></td>
+                            <td><i class='bx bx-x'></i></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="checkout">
+                <div class="Sumary">
+                    <p>Sumary</p>
+                </div>
+                <div class="aqui">
+                    <div class="infos">
+                        <div class="sub">
+                            <p>Subtotal</p>
+                            <p id="subtotal-check" >150,00</p>
+                        </div>
+                        <div class="Frete">
+                            <p>Shipping</p>
+                            <p id="frete" >5</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="total-check">
+                    <div class="aqui2">
+                        <p>Total</p>
+                        <p id="total-check" ></p>
+
+                    </div>
+                </div>
+                <div class="btn">
+                    <button>BUY IT</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/carrinho.js"></script>
+</body>
+
+</html>

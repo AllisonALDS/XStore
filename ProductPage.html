@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/ProductPage.css">
+    <link rel="stylesheet" href="font/font.css">
+    <title>X</title>
+</head>
+
+<body>
+    <header>
+        <div class="col-header">
+            <div class="logo"><a href="index.html"><img src="img/Logo.png" alt=""></a></div>
+            <div class="topics">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="#">DESTAQUE</a></li>
+                    <li><a href="#">HOMEM</a></li>
+                    <li><a href="#">MULHER</a></li>
+                </ul>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">User</a></li>
+                    <li><a href="carrinho.html">Car</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="col">
+            <div class="description">
+                <div class="title">
+                    <p id="produtoNome"></p>
+                </div>
+                <div class="sub-title">
+                    <P id="produtoDescricao"></P>
+                </div>
+                <div class="price">
+                    <span>R$<p id="produtoPreco"></p></span>
+                </div>
+                <div class="btn">
+                    <button>ADQUIRIR</button>
+                </div>
+            </div>
+            <div class="product">
+                <div class="col-img">
+                    <img id="produtoImagem" src="" alt="">
+                </div>
+            </div>
+            <div class="costumize">
+                <div class="size">
+                    <div class="title-size">
+                        <p>Escolha Seu Tamanho</p>
+                    </div>
+                    <div class="sizes">
+                        <div class="box1">
+                            <p>39</p>
+                        </div>
+                        <div class="box1">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="color">
+                    <div class="title-color">
+                        <p>Escolha Sua Cor</p>
+                    </div>
+                    <div class="colors">
+                        <button onclick="trocarImagem(0)" class="color" id="cor1" style="">
+
+                        </button>
+                        <button onclick="trocarImagem(1)" class="color" id="cor2" style="" >
+
+                        </button>
+                        <button onclick="trocarImagem(2)" class="color" id="cor3" style="">
+
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script>
+        let imagem = localStorage.getItem('produtoImagem');
+        let nome = localStorage.getItem('produtoNome');
+        let descricao = localStorage.getItem('produtoDescricao');
+        let preco = localStorage.getItem('produtoPreco');
+        let color1 = localStorage.getItem('produtoColor1');
+        let color2 = localStorage.getItem('produtoColor2');
+        let color3 = localStorage.getItem('produtoColor3');
+        let color4 = localStorage.getItem('produtoColor4');
+        let color5 = localStorage.getItem('produtoColor5');
+        let imagem2 = localStorage.getItem('produtoImagem2');
+        let imagem3 = localStorage.getItem('produtoImagem3');
+        let imagem4 = localStorage.getItem('produtoImagem4');
+        
+
+        document.getElementById('produtoImagem').src = imagem;
+        document.getElementById('produtoNome').innerText = nome;
+        document.getElementById('produtoDescricao').innerText = descricao;
+        document.getElementById('produtoPreco').innerText = preco;
+
+        const SetColor1 = `
+            <button class="color" style="background-color: ${color1};">
+            
+            </button>
+        `;const SetColor2 = `
+            <button class="color" style="background-color: ${color2};">
+            
+            </button>
+        `;const SetColor3 = `
+            <button class="color" style="background-color: ${color3};">
+            
+            </button>
+        `;
+
+        document.getElementById('cor1').innerHTML = SetColor1;
+        document.getElementById('cor2').innerHTML = SetColor2;
+        document.getElementById('cor3').innerHTML = SetColor3;
+
+        /*IMAGENS DO TENIS*/
+        const imagens = [imagem2, imagem3, imagem4];
+
+        function trocarImagem(indice) {
+            const imgElement = document.getElementById('produtoImagem');
+
+            imgElement.src = imagens[indice];
+        }
+            
+    </script>
+</body>
+
+</html>
